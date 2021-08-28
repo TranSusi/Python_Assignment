@@ -11,11 +11,6 @@ for y in range(4,7):
 for x in range(4,10,2):
     print(x) #prints out 4,6,8
 
-#Using 'While' in Loop with boolean condition
-
-# generating numbers from 0 to 10 with +-1
-# Prints out 0,1,2,3,4
-
 count = 0
 while count < 6:
     print(count)
