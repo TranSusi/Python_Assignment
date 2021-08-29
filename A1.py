@@ -125,4 +125,56 @@ full_sentences()
 
 def b():
     return ('hihi')
-    
+
+#Using CLASS, OBJECTS
+#Create new data type is student with objects that defines *student* including name, major, gpa.
+class Student:
+    def _self_(person, name, major, gpa):
+        person.name = name
+        person.major = major
+        person.gpa = gpa
+
+from  Student import Student
+student1 = Student ('Susi', 'math', 3.5)
+student2 = Student ('Jimmy', 'history', 3.7)
+student3 = Student ('Alex', 'music', 3.9)
+student1 = Student ()
+print (student1.gpa)
+
+#Using Class, then Def, then Return
+#-------------------------------------------------------------------------------#
+# Print outs:  Mercedes is a black convertible car worth $50000.00.
+#              Volvo is a white van car worth $11000.00.
+# define the Vehicle class
+
+#------------------------------------------------------------
+class transport: 
+    name = ''
+    color = ''
+    kind = ''
+    price = 1000.00
+
+def trans_descript(self):
+    trans_des ('%s is a %s %s  woth $%.2f.' % (self.name, self.color, self.kind, self.price) )
+    return trans_des
+
+car1 = transport()
+car1.name = 'Mercedes'
+car1.color = 'black'
+car1.kind = 'convertible'
+car1.price = 50000.00 
+
+car2 = transport()
+car2.name = 'Volvo'
+car2.color = 'white'
+car2.kind = 'van'
+car2.price = 11000.00 
+
+print(car1.trans_descript())
+print(car2.trans_descript)
+
+
+
+
+
+
