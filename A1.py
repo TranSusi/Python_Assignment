@@ -173,7 +173,27 @@ car2.price = 11000.00
 print(car1.trans_descript())
 print(car2.trans_descript)
 
+# Using Dictionany-> a= {.....}, For...in..
 
+# Add Kate's number, Delete Kim's number and prits out these numbers
+
+number_folder = {  
+    "Kate" : 938477890,
+    "Ken" : 938377359,
+    "Kim" : 947662281
+}  
+
+# name of dictionay[] = ..... (if wanna add)
+# using DELETE + name of dictinary [] (if wanna delete)
+number_folder["Kate"] =  938477000,
+del number_folder["Kim"]  
+
+# Using If.. in/ If... to check value that is added or deleted. If..in-> print out 1 sentence, if..not in-> print another sentence
+if "Kate" in number_folder:  
+    print("Kate is listed in the number folder") 
+    
+if "Kim" not in number_folder:      
+    print("Kim is not listed in the number folder") 
 
 
 
