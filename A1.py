@@ -194,7 +194,26 @@ if "Kate" in number_folder:
     
 if "Kim" not in number_folder:      
     print("Kim is not listed in the number folder") 
+#--------------------------------------------------------------------------------------------
 
+# Using Modules-> Import...
+# Import a modules form other file
+
+import draw
+
+def playgame():
+    name : ''
+    author : ''
+    kind : 'online'
+
+def game_des():
+    des = game_des()
+    draw.draw_game (des)
+
+# Use If to show that if this script is executed, then 
+# game_des() will be executed
+if __name__ == '__game_des__':
+    game_des()
 
 
 
