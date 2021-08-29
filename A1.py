@@ -123,5 +123,6 @@ def full_sentences():
         print(full (elements))
 full_sentences()
 
-
-
+def b():
+    return ('hihi')
+    
