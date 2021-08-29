@@ -121,7 +121,6 @@ def full_sentences():
 
     for elements in l_e:        # Loop to make sure 3 *elements* are joined to make 3 full sentences/ strings
         print(full (elements))
-
 full_sentences()
 
 
