@@ -49,7 +49,8 @@ while n > 0:
 print('Loop ended.')
 
 #using ELSE/ ELIF
-
+age = 1
+gender = ['male', 'female']
 if age < 18:
     if gender == 'male':
         print('litle boy')
@@ -90,7 +91,38 @@ for i in numbers:
         continue
     print(i)
 
+#Using FUNCTIONS
 
+#print outs  2 persons's names with their ages
+def i(name, age):
+    i('Susi', '20')
+    i('Nini', '30')
+    print('give gratitude to your friends' + 'Mr' + name + '.' 'Your age'+ age + 'just a number')
+
+# Using Functions- Def, Return
+
+#  Prints out strings:
+# 'Passion is an element of a fulfilled life'
+#' high-risk taste is an element of a fulfilled life'
+# 'meaningful action is an element of a fullfilled life' 
+
+def list_elements():                                            # create a funtion with def...(), return ...
+    return "Passion", "self disciplined" , "meaningful action"
+
+# Concatenate/join/connect the elements (passion,self-disciplined,etc)= (a)
+# to 'is an element of a fulfilled life' (b)
+# into full sentence/string (n)
+
+def full (elements):
+    return " %s is an element of a fulfilled life." % elements
+
+def full_sentences():
+    l_e = list_elements()       # Exercute function list_elements(). The program will run from line 109
+
+    for elements in l_e:        # Loop to make sure 3 *elements* are joined to make 3 full sentences/ strings
+        print(full (elements))
+
+full_sentences()
 
 
 
