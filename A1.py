@@ -324,3 +324,25 @@ print(A.difference(B))    #return value that exist in set A, not exist in set B
 print(A.intersection(B)) #returns values that exists into both set A and set B
 print(A.union(B))         #return all values in both sets, including values that are repeated in both sets
 print(A.symmetric.difference(B)) # return values that exist only one of 2 sets, no matterr if it is set A or set B
+#------------------------------------------------------------------------------------------------------------
+#Serialization
+
+#Exercise: print out the JSON string with key-value pair "Me" : 800 added to it.
+
+import json                                #import model: json-> import json
+
+
+def worker(sala_js, name, salary1):
+    money = json.loads(sala_js) #json.loads():takes a string and turns it back into the json object datastructure:
+    money[name] = salary1
+
+    return json.dumps(money)#To encode a data structure to JSON,then takes an object and returns a String
+
+money = '{"Susin" : 3000, "Sophia" : 2000 }'
+new_money = worker(money, "Him", 8000)
+decoded_money = json.loads(new_money)
+print(decoded_money["Susin"])
+print(decoded_money["Sophia"])
+print(decoded_money["Him"])
+
+#-----------------------------------------------------------------------------------------
