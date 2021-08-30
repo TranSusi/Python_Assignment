@@ -298,3 +298,14 @@ print(result1)
 result2 = re.sub("\s", "5", sentence)                      # The special sequence /s:Returns the value when string contains a white space 
 print(x)
 #------------------------------------------------------------------------
+
+#Exceptional Handling 
+#Exercise : Print out 'Great! you will get.... gifts with blank as an interge number". Inform the user if not integer number is received.
+
+try:
+    n = int(input("Please enter a number: "))
+        break
+except ValueError:                            # not interger number-> certain error *ValueError*
+print("Sorry. Not a valid number.  Try again please!")
+else:
+    print ('Great! You will get %d gifts', % (n))
