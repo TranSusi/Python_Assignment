@@ -270,7 +270,7 @@ result = [int(n) for n in numbers if x > 0]              #1 Iterate, use for.n.i
 print(result)
 #-------------------------------------------------------------------------------------------------------------------------
 
-# Using Multiple Functions Argument
+# Using Multiple Function Arguments
 
 #Example: print out 6( it is sum (0,1,2,3))
 
@@ -282,5 +282,19 @@ def sum(start: int, **numbers): # use function: def sum(argument 1, **kwargument
 
 print(sum(start = 0, a = 1, b = 2, c = 3))
 #---------------------------------------------------------------------------------
+# Use Regular Expections (Regexp)
 
+import re   #re modules for Rege
+# Print out 'heart' if it is found in the below sentence
+sentence = "The rainbow is in my heart"
+result = re.search("heart", sentence) #use search method()
+print(result)
 
+#Split the sentece only at the first occurrence:
+result1= re.split("\s", sentence) #use split() methof to chunk *sentences* into many pieces
+print(result1)
+
+#Replace white-space characters with the number 5:
+result2 = re.sub("\s", "5", sentence)                      # The special sequence /s:Returns the value when string contains a white space 
+print(x)
+#------------------------------------------------------------------------
