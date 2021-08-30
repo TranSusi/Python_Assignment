@@ -215,5 +215,19 @@ def game_des():
 if __name__ == '__game_des__':
     game_des()
 
+#---------------------------------------------------------------------------------
+# Use NUMPY ARRAY
+## Print out weights in lbs from the list of weights (88.35, 22.45, 37.90, 54.93, 49,28,34,19)
+
+weight_kg = [22.45, 37.90, 54.93, 49.28, 34.19] # Create an array ...= [....], from a given list
+
+import numpy as np              # Give *numpy* as a varriable *np*
+
+npw_kg = np.array(weight_kg)  # Create a numpy array np_w_kg, from weight_kg
+
+npw_lbs = npw_kg * 2.2         # Boolen Calculation: * -> Create np_weight_lbs from np_weight_k     
+
+print(npw_lbs)                 
+
 
 
