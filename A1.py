@@ -309,3 +309,18 @@ except ValueError:                            # not interger number-> certain er
 print("Sorry. Not a valid number.  Try again please!")
 else:
     print ('Great! You will get %d gifts', % (n))
+
+#-----------------------------------------------------
+#Set
+
+#Example: print out vaulues use 'intersection', 'union', 'diffrence','symetric.different' methods
+a = ["Susi", "Sarah", "Sean"]
+b = ["Sarah", "Scarlett"]
+
+A = set(a)
+B = set(b)
+
+print(A.difference(B))    #return value that exist in set A, not exist in set B
+print(A.intersection(B)) #returns values that exists into both set A and set B
+print(A.union(B))         #return all values in both sets, including values that are repeated in both sets
+print(A.symmetric.difference(B)) # return values that exist only one of 2 sets, no matterr if it is set A or set B
