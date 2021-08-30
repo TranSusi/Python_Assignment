@@ -237,7 +237,25 @@ import pandas as pd
 cars = pd.read_csv('cars.csv', index_col = 0)
 
 print(cars[0:2])   # Print out first 2 observations
-print(cars[5:7])    #Print out 6th and 7th observation           
+print(cars[5:7])    #Print out 6th and 7th observation        
+
+#----------------------------------------------------------------
+#Using Generator
+
+# Print out 10 random integers:
+import random       # Import a python external modules:'random'-> Use import random
+
+def lottery():       # Definite *lottery* program from modules random-> Use def lottery()
+    # returns 9 numbers between 1 and 50
+    for n in range(9):               # Run sequently/ all number from 1-40-> use loop: for..in. Return 4 numbers-> use range(5)
+        yield random.randint(1, 40)  # iterate,then extract the value and iterate upon, not release output-> use yield as a generator
+                                     # yield ( name of module. function randint()). Randint: return intergers from randome module
+
+    # returns a 10th number between 1 and 15
+    yield random.randint(1,15)
+
+for ran_number in lottery():
+       print("the next number is... %d" %(ran_number))
 
 
 
