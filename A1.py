@@ -257,5 +257,16 @@ def lottery():       # Definite *lottery* program from modules random-> Use def 
 for ran_number in lottery():
        print("the next number is... %d" %(ran_number))
 
+#-------------------------------------------------------------------
+#Using LIST COMPREHENSION
+
+# Example 1: print out positive numbers from the list, as integers.
+
+list_num = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]  # create a list as a string .... =[]
+result = [int(n) for n in numbers if x > 0]              #1 Iterate, use for.n.in + name of the list
+                                                         #2 Condition: positive numbers-> use 'if n > 0--> have a loop: for...in..If n>0
+                                           #3  then, return to the intergers-> use functions: int(n)-> put this before loop
+                                                        #4 put this function and condition into [] as a string. Then put a name 'result'
+print(result)
 
 
