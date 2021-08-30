@@ -134,7 +134,7 @@ class Student:
         person.major = major
         person.gpa = gpa
 
-from  Student import Student
+from  Student import student
 student1 = Student ('Susi', 'math', 3.5)
 student2 = Student ('Jimmy', 'history', 3.7)
 student3 = Student ('Alex', 'music', 3.9)
@@ -268,5 +268,19 @@ result = [int(n) for n in numbers if x > 0]              #1 Iterate, use for.n.i
                                            #3  then, return to the intergers-> use functions: int(n)-> put this before loop
                                                         #4 put this function and condition into [] as a string. Then put a name 'result'
 print(result)
+#-------------------------------------------------------------------------------------------------------------------------
+
+# Using Multiple Functions Argument
+
+#Example: print out 6( it is sum (0,1,2,3))
+
+
+def sum(start: int, **numbers): # use function: def sum(argument 1, **kwargument, argument 3,etc)
+    for _, sum1 in numbers.items(): #Loop with for...in, module 'numbers' with item() method
+        start += sum1
+    return start
+
+print(sum(start = 0, a = 1, b = 2, c = 3))
+#---------------------------------------------------------------------------------
 
 
