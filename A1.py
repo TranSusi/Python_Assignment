@@ -227,7 +227,17 @@ npw_kg = np.array(weight_kg)  # Create a numpy array np_w_kg, from weight_kg
 
 npw_lbs = npw_kg * 2.2         # Boolen Calculation: * -> Create np_weight_lbs from np_weight_k     
 
-print(npw_lbs)                 
+print(npw_lbs)   
+#---------------------------------------------------------------------------------
+#Using Pandas
+#Use Import pandas as pd, read_csv function
+#Access observations from DataFrame, use ( rows)
+
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+print(cars[0:2])   # Print out first 2 observations
+print(cars[5:7])    #Print out 6th and 7th observation           
 
 
 
