@@ -358,3 +358,19 @@ def multiply(a,b):
 result = partial(multiply,2)
 print(result(5))       #default values replace variables from the left->  *2* replace to a, *5 ( in *result(5)*its is called) replace to b
  #------------------------------------------------------------------------------------------------                      
+
+ #Code introspection
+
+# Define the transport class
+class transport: 
+    name = ''
+    color = ''
+    kind = ''
+    price = 1000.00
+
+def trans_descript(self):
+    trans_des ('%s is a %s %s  woth $%.2f.' % (self.name, self.color, self.kind, self.price) )
+    return trans_des
+
+# Print a list of all attributes of the transport class-> use dir()
+print(dir(trans_descript)
