@@ -346,3 +346,15 @@ print(decoded_money["Sophia"])
 print(decoded_money["Him"])
 
 #-----------------------------------------------------------------------------------------
+#Partial Functions
+
+#Print out 10 from calculation: 5 x 2
+
+from functools import partial # import modules partial, from argurment *functools* for returning other functions
+def multiply(a,b):            
+        return a * b
+
+# create a new function with varriable *multiply*  and number 2
+result = partial(multiply,2)
+print(result(5))       #default values replace variables from the left->  *2* replace to a, *5 ( in *result(5)*its is called) replace to b
+ #------------------------------------------------------------------------------------------------                      
