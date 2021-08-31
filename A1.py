@@ -374,3 +374,43 @@ def trans_descript(self):
 
 # Print a list of all attributes of the transport class-> use dir()
 print(dir(trans_descript)
+
+#------------------------------------------------------------------------------------
+#Closures
+
+#Example 1: Make a nested loop and a python closure to make functions to get multiple multiplication functions using closures.
+# That is using closures, one could make functions to create multiply_with_7() 
+def multiply_a(x):      #function outside
+    def multiply_b(num):# function inside-> means we have a closure, use nested loop ( def..def..return..return)
+        return num*x
+    return multiply_b
+
+multiplywith7 = multiply_a(3)
+print(multiplywith7(7))
+
+#Example 2: make a cool 'Greeting' with decoration as stars and %
+def star(func):
+    def inner(*args, **kwargs): #Use inner function to make other functions
+        print("*" * 10)
+        func(*args, **kwargs)
+        print("*" * 10)
+    return inner
+
+def percentage(func):
+    def inner(*args, **kwargs):
+        print("%" * 10)
+        func(*args, **kwargs)
+        print("%" * 10)
+    return inner
+
+def print(content):
+    print(content)
+printer = star(percentage(printer))
+
+def printer(content):
+    print(content)
+printer("Hello")
+#----------------------------------------------------------------------------------------------
+
+
+
