@@ -420,8 +420,8 @@ printer("Hello")
 #2 data types for the field: interger, character varrying (32), character varrying (60),character varrying (100)
 #3 Other defininitions key: not null primary, not null, not null
 
+#Note that the attributes have to be placed on the table in the same order as below.
 
-Note that the attributes have to be placed on the table in the same order as below.
 #STUDENT
 #Field name	Data type for the field	   Other definitions key
 #studentid	integer	                    not null primary 
@@ -439,4 +439,88 @@ CREATE TABLE   STUDENT (
    PhoneNum    VARCHAR(15)
 );
 
+#--------------------------------------------------------------------------------------
+
+#ML in Python
+#Practice with the 
+#
+#
+#
+#
+
+#Import Data: use module import: framework scipy, numpy,pandas, matplotlib,sklean
+import scipy
+print('scipy: {}'.format(scipy.__version__))
+# numpy
+import numpy
+print('numpy: {}'.format(numpy.__version__))
+# matplotlib
+import matplotlib
+print('matplotlib: {}'.format(matplotlib.__version__))
+# pandas
+import pandas
+print('pandas: {}'.format(pandas.__version__))
+# scikit-learn
+import sklearn
+print('sklearn: {}'.format(sklearn.__version__))
+
+#Load the data:
+#1.Import library: use the dataset as the “hello world” dataset in machine learning and statistics. 
+#2.Load dataset:  csv-> use read-csv. or download:  iris.csv 
+#3.Summary dataset:
+#3.A.Dimensions of the dataset- use Shape
+#3.B Peek at the data itself- Use head
+#3.C. Statistical summary of all attributes-use describe()
+#3.E.Class Distribution: bread down data baisng on class- use Groupby
+#4. Data visualise-#Use Univariate Plots, #Use Multivariate plots
+#5. Create data models and check algorism
+#6 Validation  for dataset
+#7. Make predictions
+
+
+#1.Import library
+
+from pandas import read_csv
+from pandas.plotting import scatter_matrix
+from matplotlib import pyplot
+from sklearn.model_selection import train_test_split
+
+#2.Load dataset csv-> use read-csv. or download:  iris.csv f
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
+names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
+dataset = read_csv(url, names=names)
+
+#3. Summary dataset
+#3.A.Dimensions of the dataset- use Shape
+
+print(dataset.shape) #Use shape
+
+#3.B. Peek at the data itself- Use head
+print(dataset.head(20))
+
+#3.C. Statistical summary of all attributes-use describe()
+print(dataset.describe())
+
+#3.E.Class Distribution: bread down data baisng on class- use Groupby
+print(dataset.groupby('class').size())
+
+#4. Data visualise-#Use Univariate Plots
+dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+pyplot.show()
+
+# Data visualisation- Use Multivariate plots
+scatter_matrix(dataset)
+pyplot.show()
+
+#6 Validation  for dataset
+Split-out validation dataset
+array = dataset.values
+X = array[:,0:4]
+y = array[:,4]
+X_train, X _validation, Y_train, Y_validation = train_test_split(X, y, test_size=0.20, random_state=1)
+
+#7Make predictions
+model = SVC(gamma='auto')
+model.fit(X_train, Y_train)
+predictions = model.predict(X_validation)
 
