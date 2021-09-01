@@ -336,6 +336,8 @@ def worker(sala_js, name, salary1):
     money = json.loads(sala_js) #json.loads():takes a string and turns it back into the json object datastructure:
     money[name] = salary1
 
+
+
     return json.dumps(money)#To encode a data structure to JSON,then takes an object and returns a String
 
 money = '{"Susin" : 3000, "Sophia" : 2000 }'
@@ -411,6 +413,30 @@ def printer(content):
     print(content)
 printer("Hello")
 #----------------------------------------------------------------------------------------------
+#SQL in SSMS
 
+#example 1: Create a table with columns as varriables: in order
+#1: variables: Field name: studentid,forename,surname,address, phonenum
+#2 data types for the field: interger, character varrying (32), character varrying (60),character varrying (100)
+#3 Other defininitions key: not null primary, not null, not null
+
+
+Note that the attributes have to be placed on the table in the same order as below.
+#STUDENT
+#Field name	Data type for the field	   Other definitions key
+#studentid	integer	                    not null primary 
+#forename	character varying(32)	    not null
+#surname	character varying(60)	    not null
+#address	character varying(100)	
+#phonenum	character varying(15)
+
+
+CREATE TABLE   STUDENT (
+   StudentID   INTEGER      PRIMARY KEY,
+   ForeName    VARCHAR(32)    NOT NULL,
+   SurName     VARCHAR(60)    NOT NULL, 
+   Address     VARCHAR(100),
+   PhoneNum    VARCHAR(15)
+);
 
 
